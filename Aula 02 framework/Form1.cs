@@ -17,7 +17,8 @@ namespace Aula_02_framework
             if (txtTarefa.Text != "")
             {
                 lbxLista.Items.Add($"{dtpPrincipal.Value:d} - {txtTarefa.Text}");
-            }else
+            }
+            else
             {
                 MessageBox.Show("Escreva algo!!");
             }
@@ -25,13 +26,9 @@ namespace Aula_02_framework
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            for (int i = lbxLista.Items.Count - 1; i >= 0; i--)
+            if (lbxLista.SelectedItem != null)
             {
-                // o item está selecionado?
-                if (lbxLista.GetSelected(i))
-                {
-                    lbxLista.Items.RemoveAt(i);
-                }
+                lbxLista.Items.Remove(lbxLista.SelectedItem);
             }
         }
     }
