@@ -30,6 +30,10 @@ namespace Aula_02_framework
             {
                 lbxLista.Items.Remove(lbxLista.SelectedItem);
             }
+            else
+            {
+                MessageBox.Show("Escolha um item para excluir!!!");
+            }
         }
     }
 }
