@@ -14,8 +14,13 @@ namespace Aula_02_framework
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            lbxLista.Items.Add($"{dtpPrincipal.Value:d} - {txtTarefa.Text}");
+            if (txtTarefa.Text != "")
+            {
+                lbxLista.Items.Add($"{dtpPrincipal.Value:d} - {txtTarefa.Text}");
+            }else
+            {
+                MessageBox.Show("Escreva algo!!");
+            }
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
